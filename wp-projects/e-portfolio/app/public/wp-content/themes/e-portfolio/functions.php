@@ -23,3 +23,6 @@ function load_scripts() {
 }
 
 add_action("wp_enqueue_scripts", "load_scripts");
+
+// Add Main Menu functionality in WP appearance menu
+add_theme_support('menus')
