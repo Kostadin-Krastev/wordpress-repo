@@ -25,4 +25,9 @@ function load_scripts() {
 add_action("wp_enqueue_scripts", "load_scripts");
 
 // Add Main Menu functionality in WP appearance menu
-add_theme_support('menus')
+add_theme_support('menus');
+
+//Registering the Main Menu that is made in appearance => Menus
+register_nav_menus(array(
+    'main_menu' => __('Main Menu', 'The main menu of the e-portfolio theme')
+    ));
