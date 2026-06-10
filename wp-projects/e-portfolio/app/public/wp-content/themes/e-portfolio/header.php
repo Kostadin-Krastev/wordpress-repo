@@ -6,6 +6,48 @@
       <link rel="icon" type="image/jpg" href="images/portrait.jpg" />
       <title>E-Portfolio</title>
       <?php wp_head(); ?>
+      <?php $theme_color = get_field('theme_color'); 
+      if($theme_color) :
+      ?>
+      <style>
+         .red-divider,
+         .navbar,
+         #about,
+         #skills .progress-bar,
+         #experience,
+         #portfolio,
+         .carousel-indicators li.active {
+            background-color: <?php echo $theme_color; ?> !important;
+         }
+
+      .navbar-nav li a:hover,
+      .navbar-nav li.active a,
+      .button1:hover,
+      #skills .heading h2,
+       .internship-block h3,
+      .competition-block h3,
+      .internship-block h6,
+      .competition-block h6,
+      .timeline-heading h4,
+      #education .heading h2,
+      .education-block h6 a,
+      .education-block h6 a:hover,
+      .education-block h3,
+      #motivation .heading h2,
+      .carousel-control.left, 
+      .carousel-control.right,
+      .carousel-inner .item h3,
+      footer .glyphicon,
+      .timeline li .timeline-badge,
+      section .heading {
+         color: <?php echo $theme_color; ?> !important;
+      }
+
+      .carousel-indicators li {
+         border-color: <?php echo $theme_color; ?> !important;
+      }
+      </style>
+      <?php endif; ?>
    </head>
 
    <body data-spy="scroll" data-target=".navbar" data.offset="60">
