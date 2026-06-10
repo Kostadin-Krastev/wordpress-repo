@@ -18,8 +18,8 @@
                   <span class="icon-bar"></span>
                </button>
             </div>
-
-            <div class="collapse navbar-collapse" id="monMenu">
+            <!-- This is the static menu. I dont need it because I created it below a dynamic menu with php -->
+            <!-- <div class="collapse navbar-collapse" id="monMenu">
                <ul class="nav navbar-nav">
                   <li><a href="#about">Me</a></li>
                   <li><a href="#skills">Skills</a></li>
@@ -28,6 +28,17 @@
                   <li><a href="#education">Education</a></li>
                   <li><a href="#portfolio">Portfolio</a></li>
                </ul>
-            </div>
+            </div> -->
+
+            <!-- add main menu functionality -->
+             <?php
+             wp_nav_menu(array(
+               'theme_location' => 'main_menu',
+               'menu_class' => 'nav navbar-nav',
+               'container' => 'div',
+               'container_class' => 'collapse navbar-collapse',
+               'container_id' => 'monMenu',
+             ));
+             ?>
          </div>
       </nav>
