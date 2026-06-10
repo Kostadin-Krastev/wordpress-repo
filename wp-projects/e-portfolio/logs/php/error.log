@@ -1,0 +1,16 @@
+[10-Jun-2026 15:48:47 UTC] PHP Parse error:  syntax error, unexpected end of file in C:\Users\User\Work\FrontEnd-study\wordpress-repo\wp-projects\e-portfolio\app\public\wp-content\themes\e-portfolio\functions.php on line 28
+[10-Jun-2026 15:50:48 UTC] PHP Parse error:  syntax error, unexpected end of file in C:\Users\User\Work\FrontEnd-study\wordpress-repo\wp-projects\e-portfolio\app\public\wp-content\themes\e-portfolio\functions.php on line 28
+[10-Jun-2026 15:51:17 UTC] PHP Parse error:  syntax error, unexpected end of file in C:\Users\User\Work\FrontEnd-study\wordpress-repo\wp-projects\e-portfolio\app\public\wp-content\themes\e-portfolio\functions.php on line 28
+[10-Jun-2026 15:51:18 UTC] PHP Parse error:  syntax error, unexpected end of file in C:\Users\User\Work\FrontEnd-study\wordpress-repo\wp-projects\e-portfolio\app\public\wp-content\themes\e-portfolio\functions.php on line 28
+[10-Jun-2026 15:58:10 UTC] PHP Parse error:  syntax error, unexpected end of file in C:\Users\User\Work\FrontEnd-study\wordpress-repo\wp-projects\e-portfolio\app\public\wp-content\themes\e-portfolio\functions.php on line 31
+[10-Jun-2026 16:00:10 UTC] PHP Fatal error:  Uncaught ArgumentCountError: _() expects exactly 1 argument, 2 given in C:\Users\User\Work\FrontEnd-study\wordpress-repo\wp-projects\e-portfolio\app\public\wp-content\themes\e-portfolio\functions.php:32
+Stack trace:
+#0 C:\Users\User\Work\FrontEnd-study\wordpress-repo\wp-projects\e-portfolio\app\public\wp-content\themes\e-portfolio\functions.php(32): _('Main Menu', 'The main menu o...')
+#1 C:\Users\User\Work\FrontEnd-study\wordpress-repo\wp-projects\e-portfolio\app\public\wp-settings.php(739): include('C:\\Users\\User\\W...')
+#2 C:\Users\User\Work\FrontEnd-study\wordpress-repo\wp-projects\e-portfolio\app\public\wp-config.php(103): require_once('C:\\Users\\User\\W...')
+#3 C:\Users\User\Work\FrontEnd-study\wordpress-repo\wp-projects\e-portfolio\app\public\wp-load.php(50): require_once('C:\\Users\\User\\W...')
+#4 C:\Users\User\Work\FrontEnd-study\wordpress-repo\wp-projects\e-portfolio\app\public\wp-admin\admin-ajax.php(22): require_once('C:\\Users\\User\\W...')
+#5 {main}
+  thrown in C:\Users\User\Work\FrontEnd-study\wordpress-repo\wp-projects\e-portfolio\app\public\wp-content\themes\e-portfolio\functions.php on line 32
+[10-Jun-2026 16:02:10 UTC] PHP Parse error:  syntax error, unexpected token ";", expecting ")" in C:\Users\User\Work\FrontEnd-study\wordpress-repo\wp-projects\e-portfolio\app\public\wp-content\themes\e-portfolio\functions.php on line 32
+[10-Jun-2026 18:54:50 UTC] PHP Parse error:  syntax error, unexpected end of file, expecting "elseif" or "else" or "endif" in C:\Users\User\Work\FrontEnd-study\wordpress-repo\wp-projects\e-portfolio\app\public\wp-content\themes\e-portfolio\header.php on line 52
