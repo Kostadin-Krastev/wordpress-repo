@@ -26,23 +26,44 @@ if($personal_information) :
             </div>
          </div>
       </section>
-<?php endif; ?>
+<?php endif; 
+
+if(have_rows('skills')) :
+   while(have_rows('skills')) : 
+      the_row();
+?>
       <section id="skills">
          <div class="red-divider"></div>
-         <div class="heading"><h2>Skills</h2></div>
+         <?php $section_title = get_sub_field('section_title'); ?>
+         <div class="heading"><h2><?php echo $section_title; ?></h2></div>
          <div class="container">
             <div class="row">
+               <?php 
+               $first_skill = get_sub_field('first_skill');
+               $second_skill = get_sub_field('second_skill');
+               $third_skill = get_sub_field('third_skill');
+               $fourth_skill = get_sub_field('fourth_skill');
+               $fifth_skill = get_sub_field('fifth_skill');
+               $sixth_skill = get_sub_field('sixth_skill');
+
+               $first_skill_percentage = get_sub_field('first_skill_percentage');
+               $second_skill_percentage = get_sub_field('second_skill_percentage');
+               $third_skill_percentage = get_sub_field('third_skill_percentage');
+               $fourth_skill_percentage = get_sub_field('fourth_skill_percentage');
+               $fifth_skill_percentage = get_sub_field('fifth_skill_percentage');
+               $sixth_skill_percentage = get_sub_field('sixth_skill_percentage');
+               ?>
                <div class="col-md-6">
                   <div class="progress">
                      <div
                         class="progress-bar"
                         role="progressbar"
-                        aria-valuenow="45"
+                        aria-valuenow="<?php echo $first_skill_percentage; ?>"
                         aria-valuemin="0"
                         aria-valuemax="100"
-                        style="width: 45%"
+                        style="<?php echo $first_skill_percentage; ?>"
                      >
-                        <h5>MySql</h5>
+                        <h5><?php echo $first_skill; ?></h5>
                      </div>
                   </div>
 
@@ -50,12 +71,12 @@ if($personal_information) :
                      <div
                         class="progress-bar"
                         role="progressbar"
-                        aria-valuenow="28"
+                        aria-valuenow="<?php echo $second_skill_percentage; ?>"
                         aria-valuemin="0"
                         aria-valuemax="100"
-                        style="width: 28%"
+                        style="<?php echo $second_skill_percentage; ?>"
                      >
-                        <h5>React Native</h5>
+                        <h5><?php echo $second_skill; ?></h5>
                      </div>
                   </div>
 
@@ -63,12 +84,12 @@ if($personal_information) :
                      <div
                         class="progress-bar"
                         role="progressbar"
-                        aria-valuenow="70"
+                        aria-valuenow="<?php echo $third_skill_percentage; ?>"
                         aria-valuemin="0"
                         aria-valuemax="100"
-                        style="width: 70%"
+                        style="<?php echo $third_skill_percentage; ?>"
                      >
-                        <h5>WordPress</h5>
+                        <h5><?php echo $third_skill; ?></h5>
                      </div>
                   </div>
                </div>
@@ -78,12 +99,12 @@ if($personal_information) :
                      <div
                         class="progress-bar"
                         role="progressbar"
-                        aria-valuenow="89"
+                        aria-valuenow="<?php echo $fourth_skill_percentage; ?>"
                         aria-valuemin="0"
                         aria-valuemax="100"
-                        style="width: 89%"
+                        style="<?php echo $fourth_skill_percentage; ?>"
                      >
-                        <h5>PHP</h5>
+                        <h5><?php echo $fourth_skill; ?></h5>
                      </div>
                   </div>
 
@@ -91,12 +112,12 @@ if($personal_information) :
                      <div
                         class="progress-bar"
                         role="progressbar"
-                        aria-valuenow="37"
+                        aria-valuenow="<?php echo $fifth_skill_percentage; ?>"
                         aria-valuemin="0"
                         aria-valuemax="100"
-                        style="width: 37%"
+                        style="<?php echo $fifth_skill_percentage; ?>"
                      >
-                        <h5>CSS</h5>
+                        <h5><?php echo $fifth_skill; ?></h5>
                      </div>
                   </div>
 
@@ -104,19 +125,22 @@ if($personal_information) :
                      <div
                         class="progress-bar"
                         role="progressbar"
-                        aria-valuenow="53"
+                        aria-valuenow="<?php echo $sixth_skill_percentage; ?>"
                         aria-valuemin="0"
                         aria-valuemax="100"
-                        style="width: 53%"
+                        style="<?php echo $sixth_skill_percentage; ?>"
                      >
-                        <h5>Javascript</h5>
+                        <h5><?php echo $sixth_skill; ?></h5>
                      </div>
                   </div>
                </div>
             </div>
          </div>
       </section>
-
+<?php 
+endwhile;
+endif;
+?>
       <section id="internships">
          <div class="container">
             <div class="grey-divider"></div>
