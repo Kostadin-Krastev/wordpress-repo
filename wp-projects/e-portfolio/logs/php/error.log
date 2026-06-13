@@ -14,3 +14,4 @@ Stack trace:
   thrown in C:\Users\User\Work\FrontEnd-study\wordpress-repo\wp-projects\e-portfolio\app\public\wp-content\themes\e-portfolio\functions.php on line 32
 [10-Jun-2026 16:02:10 UTC] PHP Parse error:  syntax error, unexpected token ";", expecting ")" in C:\Users\User\Work\FrontEnd-study\wordpress-repo\wp-projects\e-portfolio\app\public\wp-content\themes\e-portfolio\functions.php on line 32
 [10-Jun-2026 18:54:50 UTC] PHP Parse error:  syntax error, unexpected end of file, expecting "elseif" or "else" or "endif" in C:\Users\User\Work\FrontEnd-study\wordpress-repo\wp-projects\e-portfolio\app\public\wp-content\themes\e-portfolio\header.php on line 52
+[13-Jun-2026 12:20:22 UTC] PHP Warning:  Undefined array key "Information" in C:\Users\User\Work\FrontEnd-study\wordpress-repo\wp-projects\e-portfolio\app\public\wp-content\themes\e-portfolio\front-page.php on line 19
