@@ -1,40 +1,32 @@
-<?php get_header(); ?>
+<?php get_header(); 
+$personal_information = get_field('personal_information');
+if($personal_information) :
+?>
 
       <section id="about" class="container-fluid">
          <div class="col-xs-12 col-md-6 col-lg-6 profile-picture">
-            <img src="images/portrait.jpg" alt="John" class="img-circle" />
-            <h1>Hello it's me John</h1>
+            <img src="<?php echo $personal_information['portrait']; ?>" alt="John" class="img-circle" />
+            <h1><?php echo $personal_information['promt']; ?></h1>
          </div>
 
          <div class="col-xs-12 col-md-6 col-lg-6 info">
             <div class="heading">
                <div id="intro">
-                  <h3>Information</h3>
+                  <h3><?php echo $personal_information['section_title']; ?></h3>
                   <div class="white-divider"></div>
                   <br />
                   <p>
-                     Software developer at
-                     <a href="https://odatsme.com" target="_blank" style="color: white; text-decoration: none"
-                        >OdatsME</a
-                     >
+                     <?php echo $personal_information['information']; ?>
                   </p>
-                  <p>
-                     Winner of
-                     <span style="color: white">Hackathon Challenge 2024</span>
-                  </p>
-                  <p>24yo, Bachelor Degree in Software Engineering</p>
-                  <p>Montreal, Quebec, Canada</p>
-                  <p>Whatsapp: +1(555)555-555</p>
-                  <p>Email: john@odatsme.com</p>
-                  <a href="https://www.linkedin.com/" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/linkedin.png" /></a>
-                  <a href="https://github.com/" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/github.png" /></a>
+                  <a href="<?php echo $personal_information['linkedin']; ?>" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/linkedin.png" /></a>
+                  <a href="<?php echo $personal_information['github']; ?>" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/github.png" /></a>
                   <br />
-                  <a href="images/resume.docx" class="button1">Download CV</a>
+                  <a href="<?php echo $personal_information['cv_file']; ?>" class="button1">Download CV</a>
                </div>
             </div>
          </div>
       </section>
-
+<?php endif; ?>
       <section id="skills">
          <div class="red-divider"></div>
          <div class="heading"><h2>Skills</h2></div>
