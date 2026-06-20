@@ -176,93 +176,118 @@ if($internship) :
       </section>
       <?php 
       endif;
+
+      $professional_experience = get_field('expeirience');
+
+      if($professional_experience) :
+         $section_title = $professional_experience['section_title'];
       ?>
       <section id="experience">
          <div class="container"></div>
          <div class="white-divider"></div>
-         <div class="heading"><h2>Professional experience</h2></div>
+         <div class="heading">
+            <h2><?php echo $professional_experience['section_title']; ?></h2>
+         </div>
          <ul class="timeline">
+            <?php $first_experience = $professional_experience['first_experience'];
+            
+            if($first_experience) :
+            ?>
             <li>
                <div class="timeline-badge"><span class="glyphicon glyphicon-briefcase gauche"></span></div>
                <div class="timeline-panel-container-inverted">
                   <div class="timeline-panel">
                      <div class="timeline-heading">
-                        <h3>Mobile developer</h3>
-                        <h4><a href="https://linkedin.com" target="_blank">Linkedin</a></h4>
+                        <h3><?php echo $first_experience['job_title']; ?></h3>
+                        <h4>
+                           <a href="<?php echo $first_experience['company_website']; ?>"><?php echo $first_experience['company']; ?></a>
+                        </h4>
                         <p class="textt">
-                           <small class="glyphicon glyphicon-time"></small> From 01/06/2023 until Now, Washington, DC,
-                           USA
+                           <small class="glyphicon glyphicon-time"></small> <?php echo $first_experience['experience_period']; ?>, <?php echo $first_experience['experience_place']; ?>
                         </p>
                      </div>
                      <div class="timeline-body">
                         <h5>Project(s)</h5>
                         <p>
-                           <a href="https://linkedin.com" target="_blank">- Linkedin.</a>
+                           <a href="<?php echo $first_experience['project_link']; ?>"><?php echo $first_experience['project']; ?></a>
                         </p>
                         <h5>Task(s)</h5>
-                        - Crafting technical analyses prior to commencing tasks. <br />
-                        - Executing end-to-end mobile app development and deployment in a scrum team. <br />
-                        - Developing responsive user interfaces for mobile applications.
+                        <?php echo $first_experience['tasks']; ?>
                      </div>
                   </div>
                </div>
             </li>
+               <?php endif; 
+               
+               $second_experience = $professional_experience['second_experience'];
+
+               if($second_experience) :
+               ?>
 
             <li>
                <div class="timeline-badge"><span class="glyphicon glyphicon-briefcase gauche"></span></div>
                <div class="timeline-panel-container">
                   <div class="timeline-panel">
                      <div class="timeline-heading">
-                        <h3>IT project manager</h3>
+                        <h3><?php echo $second_experience['job_title']; ?></h3>
                         <h4>
-                           <a href="https://facebook.com" alt="" style="text-decoration: none">Facebook</a>
+                           <a href="<?php echo $second_experience['company_website']; ?>" alt="" style="text-decoration: none"><?php echo $second_experience['company']; ?></a>
                         </h4>
                         <p class="textt">
-                           <small class="glyphicon glyphicon-time"></small> From 02/05/2022 until 02/05/2023, Toronto,
-                           ON, Canada
+                           <small class="glyphicon glyphicon-time"></small> <?php echo $second_experience['experience_period']; ?>, <?php echo $second_experience['experience_place']; ?>
                         </p>
                      </div>
                      <div class="timeline-body">
                         <h5>Project(s)</h5>
                         <p>
                            -
-                           <a href="https://udemy.com" target="_blank">Udemy</a>.
+                           <a href="<?php echo $second_experience['project_link']; ?>"><?php echo $second_experience['project']; ?></a>.
                         </p>
                         <h5>Task(s)</h5>
-                        - Crafting technical analyses prior to commencing tasks. <br />
-                        - Executing end-to-end mobile app development and deployment in a scrum team. <br />
-                        - Developing responsive user interfaces for mobile applications.
+                        <?php echo $second_experience['tasks']; ?>
                      </div>
                   </div>
                </div>
             </li>
+
+            <?php 
+            endif;
+
+            $third_experience = $professional_experience['third_experience'];
+
+            if($third_experience) :
+            ?>
 
             <li>
                <div class="timeline-badge"><span class="glyphicon glyphicon-briefcase gauche"></span></div>
                <div class="timeline-panel-container-inverted">
                   <div class="timeline-panel">
                      <div class="timeline-heading">
-                        <h3>Software developer</h3>
-                        <h4><a href="https://google.com" target="_blank">Google</a></h4>
+                        <h3><?php echo $third_experience['job_title']; ?></h3>
+                        <h4><a href="<?php echo $third_experience['company_website']; ?>"><?php echo $third_experience['company']; ?></a></h4>
                         <p class="textt">
-                           <small class="glyphicon glyphicon-time"></small> From 03/2021 until 04/2022 , Washington, DC,
-                           USA
+                           <small class="glyphicon glyphicon-time"></small> <?php echo $third_experience['experience_period']; ?>, <?php echo $third_experience['experience_place']; ?>
                         </p>
                      </div>
                      <div class="timeline-body">
                         <h5>Project(s)</h5>
-                        <p><a href="https://facebook.com" target="_blank">- Facebook.</a></p>
+                        <p>
+                           <a href="<?php echo $third_experience['project_link']; ?>"><?php echo $third_experience['project']; ?></a>
+                        </p>
                         <h5>Task(s)</h5>
-                        - Engage in the entire lifecycle of websites development, from ideation to deployment.<br />
-                        - Guide the development of new features and capabilities, ensuring that they align with user
-                        needs and business goals.<br />
-                        - Develop responsive user interfaces for websites.
+                        <?php echo $third_experience['tasks']; ?>
                      </div>
                   </div>
                </div>
             </li>
+            <?php 
+            endif;
+            ?>
          </ul>
       </section>
+      <?php 
+      endif;
+      ?>
 
       <section id="education">
          <div class="container">
