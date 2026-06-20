@@ -134,39 +134,49 @@ if(have_rows('skills')) :
 <?php 
 endwhile;
 endif;
+
+$internship = get_field('internships');
+
+if($internship) :
+   $section_title = $internship['section_title'];
+   $first_internship = $internship['first_internship'];
+   $second_internship = $internship['second_internship'];
 ?>
       <section id="internships">
          <div class="container">
             <div class="grey-divider"></div>
             <div class="heading">
-               <h2>Internships</h2>
+               <h2><?php echo $section_title; ?></h2>
             </div>
             <div class="row">
                <div class="col-md-6">
                   <div class="internship-block">
-                     <h5>8 Jul 2017 to 20 Aug 2017</h5>
-                     <img src="images/craiova.png" alt="Craiova" height="150" width="200" />
-                     <h3>Craiova, ROMANIA</h3>
-                     <h4>Discover Kindergarten</h4>
+                     <h5><?php echo $first_internship['period']; ?></h5>
+                     <img src="<?php echo $first_internship['place_image']; ?>" alt="Craiova" height="150" width="200" />
+                     <h3><?php echo $first_internship['country']; ?></h3>
+                     <h4><?php echo $first_internship['place']; ?></h4>
                      <div class="red-divider"></div>
-                     <p>• Leadership Development Volunteer Experience Certification</p>
-                     <h6>Powered by Aiesec Global Volunteer</h6>
+                     <p><?php echo $first_internship['certificate']; ?></p>
+                     <h6><?php echo $first_internship['sponsor']; ?></h6>
                   </div>
                </div>
                <div class="col-md-6">
                   <div class="internship-block">
-                     <h5>10 Sep 2018 to 19 Oct 2018</h5>
-                     <img src="images/warsaw.png" alt="Warsaw" height="150" width="200" />
-                     <h3>Warsaw, POLAND</h3>
-                     <h4>Primary Schools</h4>
+                     <h5><?php echo $second_internship['period']; ?></h5>
+                     <img src="<?php echo $second_internship['place_image']; ?>" alt="Warsaw" height="150" width="200" />
+                     <h3><?php echo $second_internship['country']; ?></h3>
+                     <h4><?php echo $second_internship['place']; ?></h4>
                      <div class="red-divider"></div>
-                     <p>• Certificate Of Attendance in International Education Project in Warsaw and Cisie</p>
-                     <h6>Powered by Aiesec Global Volunteer</h6>
+                     <p><?php echo $second_internship['certificate']; ?></p>
+                     <h6><?php echo $second_internship['sponsor'] ?></h6>
                   </div>
                </div>
             </div>
          </div>
       </section>
+      <?php 
+      endif;
+      ?>
       <section id="experience">
          <div class="container"></div>
          <div class="white-divider"></div>
