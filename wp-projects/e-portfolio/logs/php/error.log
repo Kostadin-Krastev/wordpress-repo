@@ -34,3 +34,38 @@ Stack trace:
 [20-Jun-2026 11:26:44 UTC] PHP Warning:  Trying to access array offset on value of type null in C:\Users\User\Work\FrontEnd-study\wordpress-repo\wp-projects\e-portfolio\app\public\wp-content\themes\e-portfolio\front-page.php on line 156
 [20-Jun-2026 11:27:41 UTC] PHP Warning:  Undefined variable $country in C:\Users\User\Work\FrontEnd-study\wordpress-repo\wp-projects\e-portfolio\app\public\wp-content\themes\e-portfolio\front-page.php on line 156
 [20-Jun-2026 11:27:41 UTC] PHP Warning:  Trying to access array offset on value of type null in C:\Users\User\Work\FrontEnd-study\wordpress-repo\wp-projects\e-portfolio\app\public\wp-content\themes\e-portfolio\front-page.php on line 156
+[20-Jun-2026 13:33:35 UTC] PHP Parse error:  syntax error, unexpected end of file, expecting "elseif" or "else" or "endif" in C:\Users\User\Work\FrontEnd-study\wordpress-repo\wp-projects\e-portfolio\app\public\wp-content\themes\e-portfolio\front-page.php on line 444
+[20-Jun-2026 13:35:52 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in C:\Users\User\Work\FrontEnd-study\wordpress-repo\wp-projects\e-portfolio\app\public\wp-content\themes\e-portfolio\front-page.php:188
+Stack trace:
+#0 C:\Users\User\Work\FrontEnd-study\wordpress-repo\wp-projects\e-portfolio\app\public\wp-includes\template-loader.php(132): include()
+#1 C:\Users\User\Work\FrontEnd-study\wordpress-repo\wp-projects\e-portfolio\app\public\wp-blog-header.php(19): require_once('C:\\Users\\User\\W...')
+#2 C:\Users\User\Work\FrontEnd-study\wordpress-repo\wp-projects\e-portfolio\app\public\index.php(17): require('C:\\Users\\User\\W...')
+#3 {main}
+  thrown in C:\Users\User\Work\FrontEnd-study\wordpress-repo\wp-projects\e-portfolio\app\public\wp-content\themes\e-portfolio\front-page.php on line 188
+[20-Jun-2026 13:51:19 UTC] PHP Warning:  Array to string conversion in C:\Users\User\Work\FrontEnd-study\wordpress-repo\wp-projects\e-portfolio\app\public\wp-content\themes\e-portfolio\front-page.php on line 200
+[20-Jun-2026 13:56:06 UTC] PHP Warning:  Array to string conversion in C:\Users\User\Work\FrontEnd-study\wordpress-repo\wp-projects\e-portfolio\app\public\wp-content\themes\e-portfolio\front-page.php on line 201
+[20-Jun-2026 13:57:00 UTC] PHP Warning:  Array to string conversion in C:\Users\User\Work\FrontEnd-study\wordpress-repo\wp-projects\e-portfolio\app\public\wp-content\themes\e-portfolio\front-page.php on line 201
+[20-Jun-2026 13:57:26 UTC] PHP Warning:  Array to string conversion in C:\Users\User\Work\FrontEnd-study\wordpress-repo\wp-projects\e-portfolio\app\public\wp-content\themes\e-portfolio\front-page.php on line 201
+[20-Jun-2026 14:28:13 UTC] PHP Warning:  Array to string conversion in C:\Users\User\Work\FrontEnd-study\wordpress-repo\wp-projects\e-portfolio\app\public\wp-content\themes\e-portfolio\front-page.php on line 201
+[20-Jun-2026 14:31:35 UTC] PHP Warning:  Array to string conversion in C:\Users\User\Work\FrontEnd-study\wordpress-repo\wp-projects\e-portfolio\app\public\wp-content\themes\e-portfolio\front-page.php on line 201
+[20-Jun-2026 14:34:25 UTC] PHP Warning:  Array to string conversion in C:\Users\User\Work\FrontEnd-study\wordpress-repo\wp-projects\e-portfolio\app\public\wp-content\themes\e-portfolio\front-page.php on line 201
+[20-Jun-2026 14:34:25 UTC] PHP Warning:  Array to string conversion in C:\Users\User\Work\FrontEnd-study\wordpress-repo\wp-projects\e-portfolio\app\public\wp-content\themes\e-portfolio\front-page.php on line 210
+[20-Jun-2026 14:38:01 UTC] PHP Warning:  Array to string conversion in C:\Users\User\Work\FrontEnd-study\wordpress-repo\wp-projects\e-portfolio\app\public\wp-content\themes\e-portfolio\front-page.php on line 201
+[20-Jun-2026 14:38:01 UTC] PHP Warning:  Array to string conversion in C:\Users\User\Work\FrontEnd-study\wordpress-repo\wp-projects\e-portfolio\app\public\wp-content\themes\e-portfolio\front-page.php on line 210
+[20-Jun-2026 14:40:14 UTC] PHP Warning:  Array to string conversion in C:\Users\User\Work\FrontEnd-study\wordpress-repo\wp-projects\e-portfolio\app\public\wp-content\themes\e-portfolio\front-page.php on line 201
+[20-Jun-2026 14:40:14 UTC] PHP Warning:  Array to string conversion in C:\Users\User\Work\FrontEnd-study\wordpress-repo\wp-projects\e-portfolio\app\public\wp-content\themes\e-portfolio\front-page.php on line 210
+[20-Jun-2026 14:40:38 UTC] PHP Warning:  Array to string conversion in C:\Users\User\Work\FrontEnd-study\wordpress-repo\wp-projects\e-portfolio\app\public\wp-content\themes\e-portfolio\front-page.php on line 201
+[20-Jun-2026 14:40:38 UTC] PHP Warning:  Array to string conversion in C:\Users\User\Work\FrontEnd-study\wordpress-repo\wp-projects\e-portfolio\app\public\wp-content\themes\e-portfolio\front-page.php on line 210
+[20-Jun-2026 14:41:02 UTC] PHP Warning:  Array to string conversion in C:\Users\User\Work\FrontEnd-study\wordpress-repo\wp-projects\e-portfolio\app\public\wp-content\themes\e-portfolio\front-page.php on line 201
+[20-Jun-2026 14:41:02 UTC] PHP Warning:  Array to string conversion in C:\Users\User\Work\FrontEnd-study\wordpress-repo\wp-projects\e-portfolio\app\public\wp-content\themes\e-portfolio\front-page.php on line 210
+[20-Jun-2026 14:45:17 UTC] PHP Warning:  Array to string conversion in C:\Users\User\Work\FrontEnd-study\wordpress-repo\wp-projects\e-portfolio\app\public\wp-content\themes\e-portfolio\front-page.php on line 203
+[20-Jun-2026 14:45:17 UTC] PHP Warning:  Array to string conversion in C:\Users\User\Work\FrontEnd-study\wordpress-repo\wp-projects\e-portfolio\app\public\wp-content\themes\e-portfolio\front-page.php on line 212
+[20-Jun-2026 14:45:23 UTC] PHP Warning:  Array to string conversion in C:\Users\User\Work\FrontEnd-study\wordpress-repo\wp-projects\e-portfolio\app\public\wp-content\themes\e-portfolio\front-page.php on line 203
+[20-Jun-2026 14:45:23 UTC] PHP Warning:  Array to string conversion in C:\Users\User\Work\FrontEnd-study\wordpress-repo\wp-projects\e-portfolio\app\public\wp-content\themes\e-portfolio\front-page.php on line 212
+[20-Jun-2026 15:25:53 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in C:\Users\User\Work\FrontEnd-study\wordpress-repo\wp-projects\e-portfolio\app\public\wp-content\themes\e-portfolio\front-page.php:275
+Stack trace:
+#0 C:\Users\User\Work\FrontEnd-study\wordpress-repo\wp-projects\e-portfolio\app\public\wp-includes\template-loader.php(132): include()
+#1 C:\Users\User\Work\FrontEnd-study\wordpress-repo\wp-projects\e-portfolio\app\public\wp-blog-header.php(19): require_once('C:\\Users\\User\\W...')
+#2 C:\Users\User\Work\FrontEnd-study\wordpress-repo\wp-projects\e-portfolio\app\public\index.php(17): require('C:\\Users\\User\\W...')
+#3 {main}
+  thrown in C:\Users\User\Work\FrontEnd-study\wordpress-repo\wp-projects\e-portfolio\app\public\wp-content\themes\e-portfolio\front-page.php on line 275
