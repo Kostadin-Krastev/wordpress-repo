@@ -61,8 +61,7 @@ if(have_rows('skills')) :
                         aria-valuenow="<?php echo $first_skill_percentage; ?>"
                         aria-valuemin="0"
                         aria-valuemax="100"
-                        style="<?php echo $first_skill_percentage; ?>"
-                     >
+                        style="width: <?php echo $first_skill_percentage; ?>%;">
                         <h5><?php echo $first_skill; ?></h5>
                      </div>
                   </div>
@@ -74,8 +73,7 @@ if(have_rows('skills')) :
                         aria-valuenow="<?php echo $second_skill_percentage; ?>"
                         aria-valuemin="0"
                         aria-valuemax="100"
-                        style="<?php echo $second_skill_percentage; ?>"
-                     >
+                        style="width:<?php echo $second_skill_percentage; ?>%">
                         <h5><?php echo $second_skill; ?></h5>
                      </div>
                   </div>
@@ -87,8 +85,7 @@ if(have_rows('skills')) :
                         aria-valuenow="<?php echo $third_skill_percentage; ?>"
                         aria-valuemin="0"
                         aria-valuemax="100"
-                        style="<?php echo $third_skill_percentage; ?>"
-                     >
+                        style="width:<?php echo $third_skill_percentage; ?>%">
                         <h5><?php echo $third_skill; ?></h5>
                      </div>
                   </div>
@@ -102,8 +99,7 @@ if(have_rows('skills')) :
                         aria-valuenow="<?php echo $fourth_skill_percentage; ?>"
                         aria-valuemin="0"
                         aria-valuemax="100"
-                        style="<?php echo $fourth_skill_percentage; ?>"
-                     >
+                        style="width:<?php echo $fourth_skill_percentage; ?>%">
                         <h5><?php echo $fourth_skill; ?></h5>
                      </div>
                   </div>
@@ -115,8 +111,7 @@ if(have_rows('skills')) :
                         aria-valuenow="<?php echo $fifth_skill_percentage; ?>"
                         aria-valuemin="0"
                         aria-valuemax="100"
-                        style="<?php echo $fifth_skill_percentage; ?>"
-                     >
+                        style="width:<?php echo $fifth_skill_percentage; ?>%">
                         <h5><?php echo $fifth_skill; ?></h5>
                      </div>
                   </div>
@@ -128,8 +123,7 @@ if(have_rows('skills')) :
                         aria-valuenow="<?php echo $sixth_skill_percentage; ?>"
                         aria-valuemin="0"
                         aria-valuemax="100"
-                        style="<?php echo $sixth_skill_percentage; ?>"
-                     >
+                        style="width:<?php echo $sixth_skill_percentage; ?>%">
                         <h5><?php echo $sixth_skill; ?></h5>
                      </div>
                   </div>
