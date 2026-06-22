@@ -287,61 +287,83 @@ if($internship) :
       </section>
       <?php 
       endif;
+
+      $education = get_field('education');
+         if($education) :
       ?>
 
       <section id="education">
          <div class="container">
             <div class="red-divider"></div>
-            <div class="heading"><h2>Education</h2></div>
+            <div class="heading"><h2><?php echo $education['section_title']; ?></h2></div>
 
             <div class="row">
+               <?php $first_education = $education['first_education']; 
+                  if($first_education) :
+               ?>
                <div class="col-sm-4">
                   <div class="education-block">
-                     <h5>2018-2022</h5>
+                     <h5><?php echo $first_education['period']; ?></h5>
                      <span class="glyphicon glyphicon-education"></span>
-                     <h3>Harvard University</h3>
-                     <h4>Bachelor of Software Engineering</h4>
+                     <h3><?php echo $first_education['university']; ?></h3>
+                     <h4><?php echo $first_education['diploma']; ?></h4>
                      <div class="red-divider"></div>
                      <p>
-                        • Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                        been the industry's standard dummy text ever since the 1500s...
+                        <?php echo $first_education['thesis']; ?>
                      </p>
                   </div>
                </div>
+               <?php 
+                  endif;
+               ?>
 
                <div class="col-sm-4">
+                  <?php  $second_education = $education['second_education']; 
+                     if($second_education) :
+                  ?>
                   <div class="education-block">
-                     <h5>2022-2024</h5>
+                     <h5><?php echo $second_education['period']; ?></h5>
                      <span class="glyphicon glyphicon-education"></span>
-                     <h3>Harvard University</h3>
-                     <h4>Master of Artificial Intelligence</h4>
+                     <h3><?php echo $second_education['university']; ?></h3>
+                     <h4><?php echo $second_education['diploma']; ?></h4>
                      <div class="red-divider"></div>
                      <p>
-                        • Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                        been the industry's standard dummy text ever since the 1500s...
+                      <?php echo $second_education['thesis']; ?>
                      </p>
                   </div>
                </div>
+               <?php 
+                  endif;
+               ?>
 
                <div class="col-sm-4">
+                  <?php $third_education = $education['third_education']; 
+                     if($third_education) :
+                  ?>
                   <div class="education-block">
-                     <h5>2023-2024</h5>
+                     <h5><?php echo $third_education['period']; ?></h5>
                      <span class="glyphicon glyphicon-education"></span>
-                     <h3>Toronto University</h3>
+                     <h3><?php echo $third_education['university']; ?></h3>
                      <br />
-                     <h4>MBA diploma</h4>
+                     <h4><?php echo $third_education['diploma']; ?></h4>
                      <div class="red-divider"></div>
                      <p>
-                        • Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                        been the industry's standard dummy text ever since the 1500s...
+                        <?php echo $third_education['thesis']; ?>
                      </p>
                   </div>
                </div>
+               <?php 
+                  endif;
+               ?>
             </div>
 
            </div>
          </div>
       </section>
+
+      <?php 
+      endif;
+      ?>
 
       <section id="portfolio">
          <div class="container">
