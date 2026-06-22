@@ -69,3 +69,4 @@ Stack trace:
 #2 C:\Users\User\Work\FrontEnd-study\wordpress-repo\wp-projects\e-portfolio\app\public\index.php(17): require('C:\\Users\\User\\W...')
 #3 {main}
   thrown in C:\Users\User\Work\FrontEnd-study\wordpress-repo\wp-projects\e-portfolio\app\public\wp-content\themes\e-portfolio\front-page.php on line 275
+[22-Jun-2026 15:51:13 UTC] PHP Warning:  Array to string conversion in C:\Users\User\Work\FrontEnd-study\wordpress-repo\wp-projects\e-portfolio\app\public\wp-content\themes\e-portfolio\front-page.php on line 386
