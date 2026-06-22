@@ -363,39 +363,64 @@ if($internship) :
 
       <?php 
       endif;
+
+      $portfolio = get_field('portfolio');
+      if($portfolio) :
       ?>
 
       <section id="portfolio">
          <div class="container">
             <div class="white-divider"></div>
             <div class="heading">
-               <h2>Portfolio</h2>
+               <h2><?php echo $portfolio['section_title']; ?></h2>
             </div>
 
             <div class="row">
                 <div class="col-sm-4">
+                  <?php 
+                     $first_showcase = $portfolio['first_showcase'];
+                     if($first_showcase) :
+                  ?>
                     <a
                        class="thumbnail"
-                       href="https://www.youtube.com/"
+                       href="<?php echo $first_showcase['showcase_link']; ?>"
                        target="_blank"
                        alt="Food Recipe"
-                       ><img src="images/Forkify.png" style="width: 600px; height: 260px"
+                       ><img src="<?php echo $first_showcase['showcase_image']; ?>" style="width: 600px; height: 260px"
                     /></a>
                  </div>
+                 <?php 
+                     endif;
+                 ?>
                <div class="col-sm-4">
-                  <a class="thumbnail" href="http://test.com/" target="_blank" alt="Auxilium"
-                     ><img src="images/auxilium.png" style="width: 600px; height: 260px"
+                  <?php 
+                     $second_showcase = $portfolio['second_showcase'];
+                     if($second_showcase) :
+                  ?>
+                  <a class="thumbnail" href="<?php echo $second_showcase['showcase_link']; ?>" target="_blank" alt="Auxilium"
+                     ><img src="<?php echo $second_showcase['showcase_image']; ?>" style="width: 600px; height: 260px"
                   /></a>
                </div>
+               <?php 
+                  endif;
+               ?>
                <div class="col-sm-4">
-                <a class="thumbnail" href="http://yahoo.com/" target="_blank" alt="Mobilmed"
-                   ><img src="images/mobilmed.png" style="width: 600px; height: 260px"
+                  <?php $third_showcase = $portfolio['third_showcase'];
+                     if($third_showcase) :
+                  ?>
+                <a class="thumbnail" href="<?php echo $third_showcase['showcase_link']; ?>" target="_blank" alt="Mobilmed"
+                   ><img src="<?php echo $third_showcase['showcase_image']; ?>" style="width: 600px; height: 260px"
                 /></a>
              </div>
+             <?php 
+               endif;
+             ?>
             </div>
          </div>
       </section>
-
+         <?php 
+            endif;
+         ?>
       <section id="testimonials" style="background: #333">
          <div class="container">
             <div class="white-divider"></div>
