@@ -1,0 +1,108 @@
+/* PAGE RESET */
+p,
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+/* PAGE STYLES */
+.page-name-section {
+  margin-bottom: 78px;
+}
+
+/* price style */
+.price-plans-section {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 135px;
+}
+
+.price-plan-container {
+  max-width: 279px;
+  padding: 46px 30px;
+  border-radius: 5px;
+  box-shadow: 3px 4px 12px 1px var(--secondary-color-25);
+}
+
+.price-plan-name {
+  text-align: center;
+}
+
+.price-info-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 10px;
+}
+
+.price-number {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.price-period,
+.price-info-text {
+  color: var(--secondary-color-50);
+}
+
+.price-info-text {
+  text-align: center;
+  margin-bottom: 52px;
+}
+
+/* price plan includes list */
+.price-plan-includes li {
+  margin-bottom: 11px;
+}
+
+.price-plan-includes li:last-child {
+  margin-bottom: 45px;
+}
+
+.checkmark-icon {
+  margin-right: 11px;
+}
+
+/* button learn more */
+.secondary-button {
+  display: block;
+  margin: 0 auto;
+}
+
+/* responsive design */
+@media (max-width: 1200px) {
+  .price-plan-container {
+    max-width: 240px;
+    padding-right: 18px;
+    padding-left: 18px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .price-plans-section {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-menu-items {
+    margin: 15px 0 15px 0;
+  }
+
+  .price-plans-section {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 568px) {
+  .page-name-section,
+  .page-name-container {
+    margin-bottom: 46px;
+  }
+
+  .price-plans-section {
+    margin-bottom: 68px;
+  }
+}

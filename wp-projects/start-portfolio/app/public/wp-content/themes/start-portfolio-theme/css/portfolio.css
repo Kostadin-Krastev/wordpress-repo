@@ -1,0 +1,40 @@
+.portfolio-section {
+  display: grid;
+  grid-template-columns: 570fr 555fr;
+  gap: 55px;
+  margin-bottom: 64px;
+}
+
+figure {
+  margin: 0;
+}
+
+.portfolio-button-section {
+  margin-bottom: 99px;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  .portfolio-name-section {
+    margin-bottom: 45px;
+  }
+
+  .portfolio-section {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio-section,
+  .portfolio-button-section {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 568px) {
+  .portfolio-section {
+    width: 320px;
+  }
+
+  figure {
+    width: 320px;
+  }
+}
