@@ -44,3 +44,6 @@ function load_scripts() {
     wp_enqueue_script('fontawesome-kit');
 }
 add_action('wp_enqueue_scripts', 'load_scripts');
+
+// Menu support
+add_theme_support('menus');
