@@ -16,9 +16,10 @@ function load_stylesheets() {
 add_action("wp_enqueue_scripts", "load_stylesheets");
 
 function load_scripts() {
+    wp_register_script("jquery", "https://code.jquery.com/jquery-4.0.0.min.js", array(), 1, true); 
     wp_enqueue_script("jquery"); // Use WordPress's built-in jQuery
 
-    wp_register_script("bootstrap", "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js", array("jquery"), 1, true); //true if its going to be printed in the footer. false if not.
+    wp_register_script("bootstrap", "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js", array(), 1, true); //true if its going to be printed in the footer. false if not.
     wp_enqueue_script("bootstrap");
 }
 
