@@ -171,7 +171,9 @@ function movie_cpt() {
 		'labels' => $labels,
 		'public' => true,
 		'has_archive' => true,
-		'rewrite' => array('slug' => 'movies')
+		'rewrite' => array('slug' => 'movies'),
+		'show_in_rest' => true,
+		'supports' => array('title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments')
 	);
 
 	register_post_type('cpt_movie', $args);
