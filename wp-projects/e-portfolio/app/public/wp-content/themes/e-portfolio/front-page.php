@@ -437,39 +437,61 @@ if($internship) :
                <div class="col-sm-12">
                   <div id="carousel-testimonials" class="carousel slide" data-ride="carousel">
                      <ol class="carousel-indicators cr">
-                        <li data-target="#carousel-testimonials" data-slide-to="0" class="active"></li>
-                        <li data-target="#carousel-testimonials" data-slide-to="1"></li>
-                        <li data-target="#carousel-testimonials" data-slide-to="2"></li>
+                        <?php 
+                        if($custom_query->have_posts()): 
+                           $count = 0;
+                        while($custom_query->have_posts()) : $custom_query->the_post();
+                           ?>
+                        <li data-target="#carousel-testimonials" data-slide-to="<?php echo $count; ?>" class="<?php echo ($count == 0) ? 'active' : ''; ?>"></li>
+                        <?php
+                        $count ++;
+                        endwhile;
+                        wp_reset_postdata(); //Reset the query 
+                        endif; 
+                        ?>
                      </ol>
 
                      <div class="carousel-inner">
-                        <div class="item active text-center">
-                           <img src="images/portrait_1-scaled.jpg" class="center-block" alt="Lorem Ipsum" />
-                           <h2 style="color: white">Lorem Ipsum</h2>
-                           <h4 style="color: #c0c0c0">Software Developer at Yahoo</h4>
+                        <?php 
+                        if($custom_query->have_posts()) : $count = 0;
+                        while($custom_query->have_posts()) : $custom_query->the_post();
+                        ?>
+                        <div class="item <?php echo ($count == 0) ? 'active' : ''; ?> text-center">
+                           <?php 
+                           $testimonial = get_field('testimonial');
+                           $portrait = $testimonial['portrait'];
+                           $name = $testimonial['name'];
+                           $position = $testimonial['position'];
+                           $quote = $testimonial['quote'];
+                           ?>
+                           <?php if($portrait): ?>
+                           <img src="<?php echo $portrait; ?>" class="center-block" alt="Lorem Ipsum" />
+                           <?php
+                           endif;
+                           if($name) :
+                           ?>
+                           <h2 style="color: white"><?php echo $name; ?></h2>
+                           <?php 
+                           endif; 
+                           if($position) :
+                           ?>
+                           <h4 style="color: #c0c0c0"><?php echo $position; ?></h4>
+                           <?php 
+                           endif;
+                           if($quote) :
+                           ?>
 
                            <blockquote class="blockquote">
-                              <span class="bubble"><img src="<?php bloginfo('template_directory'); ?>/images/bubble.png" /></span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                              <span class="bubble"><img src="<?php bloginfo('template_directory'); ?>/images/bubble.png" /></span><?php echo $quote; ?>
                            </blockquote>
+                           <?php endif; ?>
                         </div>
-                        <div class="item text-center">
-                           <img src="images/jake-nackos-IF9TK5Uy-KI-unsplash-scaled.jpg" class="center-block" alt="Lorem Ipsum" />
-                           <h2 style="color: white">Lorem Ipsum</h2>
-                           <h4 style="color: #c0c0c0">Project Manager at Google</h4>
-
-                           <blockquote class="blockquote">
-                              <span class="bubble"><img src="<?php bloginfo('template_directory'); ?>/images/bubble.png" /></span> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                           </blockquote>
-                        </div>
-                        <div class="item text-center">
-                           <img src="images/joseph-gonzalez-iFgRcqHznqg-unsplash-scaled.jpg" class="center-block" alt="Lorem Ipsum" />
-                           <h2 style="color: white">Lorem Ipsum</h2>
-                           <h4 style="color: #c0c0c0">Senior Director at Linkedin</h4>
-
-                           <blockquote class="blockquote">
-                              <span class="bubble"><img src="<?php bloginfo('template_directory'); ?>/images/bubble.png" /></span> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                           </blockquote>
-                        </div>
+                        <?php
+                        $count++; 
+                        endwhile;
+                        wp_reset_postdata(); // Reset the query
+                        endif;
+                        ?>
                      </div>
                   </div>
                </div>
