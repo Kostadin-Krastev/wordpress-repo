@@ -425,13 +425,14 @@ if($internship) :
                'post_type' => 'testimonial',
                'posts_per_page' => 3 // Number of items to retrieve
             );
-            $custom_query = new WP_Query($args); // Execute the quey
+            $custom_query = new WP_Query($args); // Execute the query
+            $section_title = get_field('section_title');
          ?>
       <section id="testimonials" style="background: #333">
          <div class="container">
             <div class="white-divider"></div>
             <div class="heading">
-               <h2><span style="color: #fff">TESTIMONIALS</span></h2>
+               <h2><span style="color: #fff"><?php echo $section_title; ?></span></h2>
             </div>
             <div class="row">
                <div class="col-sm-12">
