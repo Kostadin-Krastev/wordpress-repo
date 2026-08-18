@@ -160,7 +160,7 @@ endif;
 /*
 Movies Custom Post Type
 */
-// Register Event Custom Post Type
+// Register Movies Custom Post Type
 function movie_cpt() {
 	$labels = array(
 		'name' => _x('Movies', 'Post Type General Name', 'twentytwentyfive'), 
@@ -168,11 +168,13 @@ function movie_cpt() {
 	);
 
 	$args = array(
-		'labels' = $labels,
-		'public' = true,
-		'has_archive' = true,
-		'rewrite' = array('slug' => 'movies')
+		'labels' => $labels,
+		'public' => true,
+		'has_archive' => true,
+		'rewrite' => array('slug' => 'movies')
 	);
 
 	register_post_type('cpt_movie', $args);
-}
+};
+
+add_action('init', 'movie_cpt');
