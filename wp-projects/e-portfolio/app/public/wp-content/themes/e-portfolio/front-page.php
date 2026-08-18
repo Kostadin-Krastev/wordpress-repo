@@ -420,6 +420,12 @@ if($internship) :
       </section>
          <?php 
             endif;
+            // Custom query to get posts from the custom post type 'testimonial'
+            $args = array(
+               'post_type' => 'testimonial',
+               'posts_per_page' => 3 // Number of items to retrieve
+            );
+            $custom_query = new WP_Query($args); // Execute the quey
          ?>
       <section id="testimonials" style="background: #333">
          <div class="container">
