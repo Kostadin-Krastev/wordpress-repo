@@ -157,3 +157,22 @@ if ( ! function_exists( 'twentytwentyfive_format_binding' ) ) :
 		}
 	}
 endif;
+/*
+Movies Custom Post Type
+*/
+// Register Event Custom Post Type
+function movie_cpt() {
+	$labels = array(
+		'name' => _x('Movies', 'Post Type General Name', 'twentytwentyfive'), 
+		'singular_name' => _x('Movie','Post Type General Name', 'twentytwentyfive')
+	);
+
+	$args = array(
+		'labels' = $labels,
+		'public' = true,
+		'has_archive' = true,
+		'rewrite' = array('slug' => 'movies')
+	);
+
+	register_post_type('cpt_movie', $args);
+}
