@@ -492,6 +492,14 @@ if($internship) :
                         endwhile;
                         wp_reset_postdata(); // Reset the query
                         endif;
+
+                        // Custom query to get posts from the custom post type 'testimonial'
+                           $args = array(
+                           'post_type' => 'quotes',
+                           'posts_per_page' => 3 // Number of items to retrieve
+                           );
+                           $custom_query = new WP_Query($args); // Execute the query
+                           $section_title = get_field('section_title');
                         ?>
                      </div>
                   </div>
@@ -506,9 +514,17 @@ if($internship) :
             <div class="heading"><h2>Motivation</h2></div>
             <div id="monCarousel" class="carousel slide text-center" data-ride="carousel">
                <ol class="carousel-indicators">
-                  <li data-target="#monCarousel" data-slide-to="0"></li>
-                  <li data-target="#monCarousel" data-slide-to="1" class="active"></li>
-                  <li data-target="#monCarousel" data-slide-to="2"></li>
+                  <?php if($custom_query -> have_posts()): 
+                     $count = 0;
+                     while($custom_query -> have_posts()) : $custom_query -> the_post();
+                     ?>
+                  <li data-target="#monCarousel" data-slide-to="<?php echo $count; ?>" class=<?php echo ($count == 0) ? 'active' : ''; ?>></li>
+                  <?php
+                  $count++;
+                  endwhile;
+                  wp_reset_postdata(); // Reset the query 
+                  endif;
+                  ?>
                </ol>
                <div class="carousel-inner" role="listbox">
                   <div class="item active">
