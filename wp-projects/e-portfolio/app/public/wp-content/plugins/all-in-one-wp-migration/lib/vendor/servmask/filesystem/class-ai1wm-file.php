@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright (C) 2014-2018 ServMask Inc.
+ * Copyright (C) 2014-2025 ServMask Inc.
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -15,6 +15,8 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
+ * Attribution: This code is part of the All-in-One WP Migration plugin, developed by
+ *
  * ███████╗███████╗██████╗ ██╗   ██╗███╗   ███╗ █████╗ ███████╗██╗  ██╗
  * ██╔════╝██╔════╝██╔══██╗██║   ██║████╗ ████║██╔══██╗██╔════╝██║ ██╔╝
  * ███████╗█████╗  ██████╔╝██║   ██║██╔████╔██║███████║███████╗█████╔╝
@@ -23,20 +25,42 @@
  * ╚══════╝╚══════╝╚═╝  ╚═╝  ╚═══╝  ╚═╝     ╚═╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
  */
 
+if ( ! defined( 'ABSPATH' ) ) {
+	die( 'Kangaroos cannot jump here' );
+}
+
 class Ai1wm_File {
 
 	/**
-	 * Create a file with contents
+	 * Create a file with content
 	 *
-	 * @param string $path     Path to the file
-	 * @param string $contents Contents of the file
-	 *
+	 * @param  string $path    Path to the file
+	 * @param  string $content Content of the file
 	 * @return boolean
 	 */
-	public static function create( $path, $contents ) {
+	public static function create( $path, $content ) {
+		if ( ! @file_exists( $path ) ) {
+			if ( ! @is_writable( dirname( $path ) ) ) {
+				return false;
+			}
+
+			if ( ! @touch( $path ) ) {
+				return false;
+			}
+		} elseif ( ! @is_writable( $path ) ) {
+			return false;
+		}
+
+		// No changes were added
+		if ( function_exists( 'md5_file' ) ) {
+			if ( @md5_file( $path ) === md5( $content ) ) {
+				return true;
+			}
+		}
+
 		$is_written = false;
 		if ( ( $handle = @fopen( $path, 'w' ) ) !== false ) {
-			if ( @fwrite( $handle, $contents ) !== false ) {
+			if ( @fwrite( $handle, $content ) !== false ) {
 				$is_written = true;
 			}
 
@@ -44,5 +68,31 @@ class Ai1wm_File {
 		}
 
 		return $is_written;
+	}
+
+	/**
+	 * Create a file with marker and content
+	 *
+	 * @param  string $path    Path to the file
+	 * @param  string $marker  Name of the marker
+	 * @param  string $content Content of the file
+	 * @return boolean
+	 */
+	public static function insert_with_markers( $path, $marker, $content ) {
+		return @insert_with_markers( $path, $marker, $content );
+	}
+
+	/**
+	 * Delete a file by path
+	 *
+	 * @param  string  $path Path to the file
+	 * @return boolean
+	 */
+	public static function delete( $path ) {
+		if ( ! @file_exists( $path ) ) {
+			return false;
+		}
+
+		return @unlink( $path );
 	}
 }

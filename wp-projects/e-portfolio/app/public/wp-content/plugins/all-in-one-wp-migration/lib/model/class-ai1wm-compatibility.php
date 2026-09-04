@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright (C) 2014-2018 ServMask Inc.
+ * Copyright (C) 2014-2025 ServMask Inc.
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -15,6 +15,8 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
+ * Attribution: This code is part of the All-in-One WP Migration plugin, developed by
+ *
  * ███████╗███████╗██████╗ ██╗   ██╗███╗   ███╗ █████╗ ███████╗██╗  ██╗
  * ██╔════╝██╔════╝██╔══██╗██║   ██║████╗ ████║██╔══██╗██╔════╝██║ ██╔╝
  * ███████╗█████╗  ██████╔╝██║   ██║██╔████╔██║███████║███████╗█████╔╝
@@ -22,6 +24,10 @@
  * ███████║███████╗██║  ██║ ╚████╔╝ ██║ ╚═╝ ██║██║  ██║███████║██║  ██╗
  * ╚══════╝╚══════╝╚═╝  ╚═╝  ╚═══╝  ╚═╝     ╚═╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
  */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	die( 'Kangaroos cannot jump here' );
+}
 
 class Ai1wm_Compatibility {
 
@@ -41,9 +47,14 @@ class Ai1wm_Compatibility {
 
 		$messages = array();
 		foreach ( $extensions as $extension_name => $extension_data ) {
-			$message = Ai1wm_Compatibility::check( $extension_data );
-			if ( ! empty( $message ) ) {
-				$messages[] = $message;
+			if ( ! Ai1wm_Compatibility::check( $extension_data ) ) {
+				if ( defined( 'WP_CLI' ) ) {
+					/* translators: Extension name. */
+					$messages[] = sprintf( __( '%s is out of date. Please update this extension before using it.', 'all-in-one-wp-migration' ), $extension_data['title'] );
+				} else {
+					/* translators: 1: Extension name, 2: Plugins update page. */
+					$messages[] = sprintf( __( '<strong>%1$s</strong> is out of date. You must <a href="%2$s">update this extension</a> before using it.<br />', 'all-in-one-wp-migration' ), $extension_data['title'], network_admin_url( 'plugins.php' ) );
+				}
 			}
 		}
 
@@ -53,17 +64,10 @@ class Ai1wm_Compatibility {
 	public static function check( $extension ) {
 		if ( $extension['version'] !== 'develop' ) {
 			if ( version_compare( $extension['version'], $extension['requires'], '<' ) ) {
-				if ( ( $plugin = get_plugin_data( sprintf( '%s/%s', WP_PLUGIN_DIR, $extension['basename'] ) ) ) ) {
-					return sprintf(
-						__(
-							'<strong>%s</strong> is not the latest version. ' .
-							'You must update the plugin before you can use it. <br />',
-							AI1WM_PLUGIN_NAME
-						),
-						$plugin['Name']
-					);
-				}
+				return false;
 			}
 		}
+
+		return true;
 	}
 }
