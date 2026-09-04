@@ -493,9 +493,9 @@ if($internship) :
                         wp_reset_postdata(); // Reset the query
                         endif;
 
-                        // Custom query to get posts from the custom post type 'testimonial'
+                        // Custom query to get posts from the custom post type 'Motivation'
                            $args = array(
-                           'post_type' => 'quotes',
+                           'post_type' => 'motivation',
                            'posts_per_page' => 3 // Number of items to retrieve
                            );
                            $custom_query = new WP_Query($args); // Execute the query
@@ -511,7 +511,7 @@ if($internship) :
       <section id="motivation">
          <div class="container">
             <div class="red-divider"></div>
-            <div class="heading"><h2>Motivation</h2></div>
+            <div class="heading"><h2><?php echo $section_title; ?></h2></div>
             <div id="monCarousel" class="carousel slide text-center" data-ride="carousel">
                <ol class="carousel-indicators">
                   <?php if($custom_query -> have_posts()): 
@@ -527,20 +527,34 @@ if($internship) :
                   ?>
                </ol>
                <div class="carousel-inner" role="listbox">
-                  <div class="item active">
+                  <?php 
+                  if($custom_query -> have_posts()) :
+                     $count = 0;
+                     while($custom_query -> have_posts()) : $custom_query -> the_post();
+                  ?>
+                  <div class="item <?php echo ($count == 0) ? 'active' : ''; ?>">
+                     <?php 
+                     $motivational_quotes = get_field('quotes');
+                     $quote = $motivational_quotes['quote'];
+                     $quote_theme = $motivational_quotes['quote_theme'];
+                     if($quote) :
+                     ?>
                      <h3>
-                        "Exploration is really the essence of the human spirit."
+                        <?php echo $quote; ?>
                      </h3>
-                     <h4>Exploration</h4>
+                     <?php 
+                     endif 
+                     ?>
+                     <?php if($quote_theme) : ?>
+                     <h4><?php echo $quote_theme; ?></h4>
+                     <?php endif ?>
                   </div>
-                  <div class="item">
-                     <h3>"Changes call for innovation, and innovation leads to progress."</h3>
-                     <h4>Innovation</h4>
-                  </div>
-                  <div class="item">
-                     <h3>"Research is creating new knowledge."</h3>
-                     <h4>Research</h4>
-                  </div>
+                  <?php 
+                     $count++;
+                     endwhile;
+                     wp_reset_postdata(); // Reset the query
+                     endif;
+                  ?>
                </div>
 
                <a href="#monCarousel" class="left carousel-control" role="button" data-slide="prev">
