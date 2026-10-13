@@ -1,5 +1,5 @@
 <?php
-function_load_stylesheet() {
+function load_stylesheets() {
     wp_register_style('bootstrap', 'https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css', array(), 1, 'all');
     wp_enqueue_style('bootstrap');
 
@@ -17,8 +17,8 @@ function_load_stylesheet() {
 }
 add_action('wp_enqueue_scripts', 'load_stylesheets');
 
-function_load_scripts() {
-    wp_register_scripts('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js', array(), 1, 'all');
+function load_scripts() {
+    wp_register_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js', array(), 1, 'all');
     wp_enqueue_script('jquery');
 
     wp_register_script('bootstrapjs', 'https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js', array(), 1, 'all');
