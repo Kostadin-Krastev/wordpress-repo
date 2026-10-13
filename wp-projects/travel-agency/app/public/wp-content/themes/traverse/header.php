@@ -5,8 +5,9 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/ico"
-    href="assets/images/favicon.ico"/>
+    href="<?php bloginfo('template_directory') ?>assets/images/favicon.ico"/>
   <title>Traverse</title>
+  <?php wp_head(); ?>
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data.offset="60" style="background-color: white;">
