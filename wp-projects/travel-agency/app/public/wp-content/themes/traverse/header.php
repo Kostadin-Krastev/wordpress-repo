@@ -42,4 +42,15 @@
         </li>
       </ul>
     </div>
+    <?php 
+      wp_nav_menu(
+        array(
+          'theme_location' => 'main-menu',
+          'container' => 'div',
+          'container_class' => 'collapse navbar-collapse',
+          'container_id' => 'navbar-list-2',
+          'menu_class' => 'navbar-nav'
+        )
+      );
+    ?>
   </nav>
