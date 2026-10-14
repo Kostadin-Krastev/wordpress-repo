@@ -25,3 +25,13 @@ function load_scripts() {
     wp_enqueue_script('bootstrapcdn');
 }
 add_action('wp_enqueue_scripts', 'load_scripts');
+
+// Add theme support
+add_theme_support('menus');
+
+// Register menu's location's
+register_nav_menus(
+    array(
+        'main-menu' => __('Main Menu', 'Desktop main menu')
+    )
+);
