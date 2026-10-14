@@ -13,7 +13,7 @@
 <body data-spy="scroll" data-target=".navbar" data.offset="60" style="background-color: white;">
 
   <nav class="navbar navbar-expand-xl navbar-light fixed-top">
-    <a class="navbar-brand" href="index.html">
+    <a class="navbar-brand" href="<?php site_url(); ?>">
       <img
         src="<?php bloginfo('template_directory'); ?>/assets/images/logo.svg"
         class="logo" alt="traverse">
