@@ -5,7 +5,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/ico"
-    href="<?php bloginfo('template_directory') ?>assets/images/favicon.ico"/>
+    href="<?php bloginfo('template_directory'); ?>/assets/images/favicon.ico"/>
   <title>Traverse</title>
   <?php wp_head(); ?>
 </head>
@@ -15,7 +15,7 @@
   <nav class="navbar navbar-expand-xl navbar-light fixed-top">
     <a class="navbar-brand" href="index.html">
       <img
-        src="assets/images/logo.svg"
+        src="<?php bloginfo('template_directory'); ?>/assets/images/logo.svg"
         class="logo" alt="traverse">
     </a>
     <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbar-list-2"
