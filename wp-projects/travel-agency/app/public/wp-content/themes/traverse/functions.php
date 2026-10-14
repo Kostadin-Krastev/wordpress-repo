@@ -12,7 +12,7 @@ function load_stylesheets() {
     wp_register_style('stylecss', get_template_directory_uri().'/css/style.css', array(), 1, 'all');
     wp_enqueue_style('stylecss');
     
-    wp_register_style('mediaqueries', get_template_directory().'/css/mediaQueries.css', array(), 1, 'all');
+    wp_register_style('mediaqueries', get_template_directory_uri().'/css/mediaQueries.css', array(), 1, 'all');
     wp_enqueue_style('mediaqueries');
 }
 add_action('wp_enqueue_scripts', 'load_stylesheets');
