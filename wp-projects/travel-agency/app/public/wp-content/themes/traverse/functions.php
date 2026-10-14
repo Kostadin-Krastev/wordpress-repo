@@ -31,6 +31,7 @@ add_action('wp_enqueue_scripts', 'load_scripts');
 
 // Add theme support
 add_theme_support('menus');
+add_theme_support('widgets');
 
 // Register menu's location's
 register_nav_menus(
@@ -38,3 +39,56 @@ register_nav_menus(
         'main-menu' => __('Main Menu', 'Desktop main menu')
     )
 );
+
+// Register footer widgets
+
+function footer_widgets() {
+    register_sidebar(
+        array(
+            'name' => 'footer 1',
+            'id' => 'footer_1',
+            'before_widget' => '<ul>',
+            'after_widget' => '</ul>',
+            'before_title' => '<h4>',
+            'after_title' => '</h4>'
+        )
+    );
+
+     register_sidebar(
+        array(
+            'name' => 'footer 2',
+            'id' => 'footer_2',
+            'before_widget' => '<ul>',
+            'after_widget' => '</ul>',
+            'before_title' => '<h4>',
+            'after_title' => '</h4>'
+        )
+    );
+
+     register_sidebar(
+        array(
+            'name' => 'footer 3',
+            'id' => 'footer_3',
+            'before_widget' => '<ul>',
+            'after_widget' => '</ul>',
+            'before_title' => '<h4>',
+            'after_title' => '</h4>'
+        )
+    );
+
+    register_sidebar(
+        array(
+            'name' => 'Footer Created By',
+            'id' => 'footer_created_by'
+        )
+    );
+
+    register_sidebar(
+        array(
+            'name' => 'Footer Copyright',
+            'id' => 'footer_copyright'
+        )
+    );
+};
+
+add_action('widgets_init', 'footer_widgets');
