@@ -23,25 +23,6 @@
       <span class="navbar-toggler-icon"></span>
       <span class="my-1 mx-2 close">X</span>
     </button>
-    <div id="navbar-list-2" class="collapse navbar-collapse">
-      <ul class="navbar-nav">
-        <li>
-          <a href="about-us.html">About Us</a>
-        </li>
-        <li>
-          <a href="news.html">News</a>
-        </li>
-        <li>
-          <a href="contact.html">Contact</a>
-        </li>
-        <li>
-          <a href="privacy-policy.html">Privacy Policy</a>
-        </li>
-        <li id="menu-item-266">
-          <a href="#faq">FAQ</a>
-        </li>
-      </ul>
-    </div>
     <?php 
       wp_nav_menu(
         array(
