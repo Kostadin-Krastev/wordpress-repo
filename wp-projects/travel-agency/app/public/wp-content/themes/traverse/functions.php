@@ -23,6 +23,9 @@ function load_scripts() {
 
     wp_register_script('bootstrapjs', 'https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js', array(), 1, 'true');
     wp_enqueue_script('bootstrapcdn');
+
+    wp_register_script('scriptsjs', get_template_directory_uri().'/js/scripts.js', array(), 1, 'true');
+    wp_enqueue_script('scriptsjs');
 }
 add_action('wp_enqueue_scripts', 'load_scripts');
 
