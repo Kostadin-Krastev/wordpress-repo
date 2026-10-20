@@ -37,7 +37,8 @@ add_theme_support('widgets');
 register_nav_menus(
     array(
         'main-menu' => __('Main Menu', 'Desktop main menu'),
-        'left-footer-menu' =>__('Left Footer Menu', 'Quick links in the left footer sidebar'),
+        'left-footer-menu' => __('Left Footer Menu', 'Quick links in the left footer sidebar'),
+        'middle_footer-menu' => __('Middle Footer Menu', 'Quick links in the middle footer sidebar'),
     )
 );
 
