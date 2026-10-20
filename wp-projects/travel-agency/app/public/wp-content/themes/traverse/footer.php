@@ -1,18 +1,11 @@
 <footer class="footerWideScreen">
     <div class="row widgets">
       <div class="myWidget col-lg-4 col-md-4 col-sm-4">
-        <h4>Traverse</h4>
-        <ul>
-          <li>
-            <a href="about-us.html">About Us</a>
-          </li>
-          <li>
-            <a href="news.html">News</a>
-          </li>
-          <li>
-            <a href="contact.html">Contact</a>
-          </li>
-        </ul>
+       <?php 
+          if(is_active_sidebar('footer_1')) :
+            dynamic_sidebar('footer_1');
+          endif;
+       ?>
       </div>
       <div class="myWidget col-lg-4 col-md-4 col-sm-4">
         <h4>Other links</h4>
@@ -60,19 +53,11 @@
   <footer class="footerMobileScreen">
     <div class="widgets">
       <div class="myWidget">
-        <h4>Traverse</h4>
-        <ul>
-          <li>
-            <a href="about-us.html">About Us</a>
-          </li>
-          <li>
-            <a href="news.html">News</a>
-          </li>
-          <li>
-            <a href="contact.html">Contact</a>
-          </li>
-        </ul>
-
+          <?php 
+          if(is_active_sidebar('footer_1')) :
+            dynamic_sidebar('footer_1');
+          endif;
+       ?>
       </div>
       <div class="myWidget">
         <h4>Other links</h4>
