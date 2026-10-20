@@ -8,18 +8,11 @@
        ?>
       </div>
       <div class="myWidget col-lg-4 col-md-4 col-sm-4">
-        <h4>Other links</h4>
-        <ul>
-          <li>
-            <a href="#help">Benefits</a>
-          </li>
-          <li>
-            <a href="#steps">How It Works</a>
-          </li>
-          <li>
-            <a href="#faq">Frequently Asked Questions</a>
-          </li>
-        </ul>
+        <?php 
+          if(is_active_sidebar('footer_2')) :
+            dynamic_sidebar('footer_2');
+          endif;
+        ?>
       </div>
       <div class="myWidget col-lg-4 col-md-4 col-sm-4">
         <h4>Destinations</h4>
@@ -60,18 +53,11 @@
        ?>
       </div>
       <div class="myWidget">
-        <h4>Other links</h4>
-        <ul>
-        <li>
-            <a href="#help">Benefits</a>
-          </li>
-          <li>
-            <a href="#steps">How It Works</a>
-          </li>
-          <li>
-            <a href="#faq">Frequently Asked Questions</a>
-          </li>
-        </ul>
+        <?php 
+          if(is_active_sidebar('footer_2')) :
+            dynamic_sidebar('footer_2');
+          endif;
+        ?>
       </div>
       <div class="myWidget">
         <h4>Destinations</h4>
