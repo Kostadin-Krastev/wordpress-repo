@@ -30,8 +30,11 @@
       
       ?>
       <div class="copyrightText">
-        <p>Copyright © 2024 Traverse. Your Travel Guide. | <a href="privacy-policy.html"
-            target="_blank">Privacy Policy</a></p>
+        <?php 
+          if(is_active_sidebar('footer_copyright')) :
+            dynamic_sidebar('footer_copyright');
+          endif;
+        ?>
       </div>
     </div>
   </footer>
@@ -67,8 +70,11 @@
         endif;
       ?>
       <div class="copyrightText">
-        <p>Copyright © 2024 Traverse. Your Travel Guide. | <a href="privacy-policy.html"
-            target="_blank">Privacy Policy</a></p>
+        <?php 
+          if(is_active_sidebar('footer_copyright')) :
+            dynamic_sidebar('footer_copyright');
+          endif;
+        ?>
       </div>
     </div>
   </footer>
