@@ -39,6 +39,7 @@ register_nav_menus(
         'main-menu' => __('Main Menu', 'Desktop main menu'),
         'left-footer-menu' => __('Left Footer Menu', 'Quick links in the left footer sidebar'),
         'middle_footer-menu' => __('Middle Footer Menu', 'Quick links in the middle footer sidebar'),
+        'right_footer_menu' => __('Right Footer Menu', 'Quick links in the right footer sidebar'),
     )
 );
 
