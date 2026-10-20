@@ -36,7 +36,8 @@ add_theme_support('widgets');
 // Register menu's location's
 register_nav_menus(
     array(
-        'main-menu' => __('Main Menu', 'Desktop main menu')
+        'main-menu' => __('Main Menu', 'Desktop main menu'),
+        'left-footer-menu' =>__('Left Footer Menu', 'Quick links in the left footer sidebar'),
     )
 );
 
