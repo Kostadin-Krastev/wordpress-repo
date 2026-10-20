@@ -15,18 +15,11 @@
         ?>
       </div>
       <div class="myWidget col-lg-4 col-md-4 col-sm-4">
-        <h4>Destinations</h4>
-        <ul>
-          <li>
-            <a href="#">Lorem Ipsum</a>
-          </li>
-          <li>
-            <a href="#">Lorem Ipsum</a>
-          </li>
-          <li>
-            <a href="#">Lorem Ipsum</a>
-          </li>
-        </ul>
+          <?php 
+            if(is_active_sidebar('footer_3')) :
+              dynamic_sidebar('footer_3');
+            endif;
+          ?>
       </div>
     </div>
     <div class="copyright">
@@ -60,18 +53,11 @@
         ?>
       </div>
       <div class="myWidget">
-        <h4>Destinations</h4>
-        <ul>
-          <li>
-            <a href="#">Lorem Ipsum</a>
-          </li>
-          <li>
-            <a href="#">Lorem Ipsum</a>
-          </li>
-          <li>
-            <a href="#">Lorem Ipsum</a>
-          </li>
-        </ul>
+          <?php 
+            if(is_active_sidebar('footer_3')) :
+              dynamic_sidebar('footer_3');
+            endif;
+          ?>
       </div>
     </div>
     <div class="copyright">
