@@ -23,12 +23,12 @@
       </div>
     </div>
     <div class="copyright">
-      <div class="traverse">
-        <p>Created By</p>
-        <img loading="lazy"
-          src="assets/images/logo.png"
-          width="120" height="28" />
-      </div>
+      <?php 
+        if(is_active_sidebar('footer_created_by')) :
+          dynamic_sidebar('footer_created_by');
+        endif; 
+      
+      ?>
       <div class="copyrightText">
         <p>Copyright © 2024 Traverse. Your Travel Guide. | <a href="privacy-policy.html"
             target="_blank">Privacy Policy</a></p>
@@ -61,12 +61,11 @@
       </div>
     </div>
     <div class="copyright">
-      <div class="traverse">
-        <p>Created By</p>
-        <img loading="lazy"
-          src="assets/images/logo.png"
-          width="120" height="28" />
-      </div>
+      <?php 
+        if(is_active_sidebar('footer_created_by')) :
+          dynamic_sidebar('footer_created_by');
+        endif;
+      ?>
       <div class="copyrightText">
         <p>Copyright © 2024 Traverse. Your Travel Guide. | <a href="privacy-policy.html"
             target="_blank">Privacy Policy</a></p>
