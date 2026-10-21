@@ -1067,6 +1067,37 @@ a.card-title {
   float: left;
 }
 
+.copyright .copyrightText li {
+  padding-top: 5px !important;
+  font-size: 14px !important;
+  list-style-type: none !important;
+}
+
+.copyright #block-7 {
+  float: right;
+  display: flex;
+  flex-direction: row;
+}
+
+.copyright #block-7 .traverse {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  font-size: 14px;
+  padding-top: 5px;
+}
+
+.copyright .traverse p {
+  font-size: 14px;
+  margin: 0;
+}
+
+.copyright #block-7 .traverse img {
+  height: 28px;
+  width: 120px;
+  margin-top: -0.3em;
+}
+
 .footerMobileScreen {
   display: none;
 }
