@@ -1067,28 +1067,6 @@ a.card-title {
   float: left;
 }
 
-.copyright .copyrightText p {
-  font-size: 14px !important;
-  padding-top: 5px !important;
-}
-
-.copyright .traverse {
-  padding-top: 5px;
-  float: right;
-  display: flex;
-  flex-direction: row;
-}
-
-.copyright .traverse p {
-  font-size: 14px;
-}
-
-.copyright .traverse img {
-  height: 28px;
-  width: 120px;
-  margin-top: -0.3em;
-}
-
 .footerMobileScreen {
   display: none;
 }
