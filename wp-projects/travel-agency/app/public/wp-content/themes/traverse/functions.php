@@ -95,3 +95,62 @@ function footer_widgets() {
 };
 
 add_action('widgets_init', 'footer_widgets');
+
+// Register Custom Post Type
+// Slide Items Custom Post Type
+function slide_items_post_type() {
+
+	$labels = array(
+		'name'                  => _x( 'Slides', 'Post Type General Name', 'travers' ),
+		'singular_name'         => _x( 'Slide', 'Post Type Singular Name', 'travers' ),
+		'menu_name'             => __( 'Slides', 'travers' ),
+		'name_admin_bar'        => __( 'Slide', 'travers' ),
+		'archives'              => __( 'Item Archives', 'travers' ),
+		'attributes'            => __( 'Item Attributes', 'travers' ),
+		'parent_item_colon'     => __( 'Parent Item:', 'travers' ),
+		'all_items'             => __( 'All Items', 'travers' ),
+		'add_new_item'          => __( 'Add New Item', 'travers' ),
+		'add_new'               => __( 'Add New', 'travers' ),
+		'new_item'              => __( 'New Item', 'travers' ),
+		'edit_item'             => __( 'Edit Item', 'travers' ),
+		'update_item'           => __( 'Update Item', 'travers' ),
+		'view_item'             => __( 'View Item', 'travers' ),
+		'view_items'            => __( 'View Items', 'travers' ),
+		'search_items'          => __( 'Search Item', 'travers' ),
+		'not_found'             => __( 'Not found', 'travers' ),
+		'not_found_in_trash'    => __( 'Not found in Trash', 'travers' ),
+		'featured_image'        => __( 'Featured Image', 'travers' ),
+		'set_featured_image'    => __( 'Set featured image', 'travers' ),
+		'remove_featured_image' => __( 'Remove featured image', 'travers' ),
+		'use_featured_image'    => __( 'Use as featured image', 'travers' ),
+		'insert_into_item'      => __( 'Insert into item', 'travers' ),
+		'uploaded_to_this_item' => __( 'Uploaded to this item', 'travers' ),
+		'items_list'            => __( 'Items list', 'travers' ),
+		'items_list_navigation' => __( 'Items list navigation', 'travers' ),
+		'filter_items_list'     => __( 'Filter items list', 'travers' ),
+	);
+	$args = array(
+		'label'                 => __( 'Slide', 'travers' ),
+		'description'           => __( 'Slide items for hero section', 'travers' ),
+		'labels'                => $labels,
+		'supports'              => array( 'title', 'editor' ),
+		'taxonomies'            => array( 'category', 'post_tag' ),
+		'hierarchical'          => false,
+		'public'                => true,
+		'show_ui'               => true,
+		'show_in_menu'          => true,
+		'menu_position'         => 5,
+		'menu_icon'             => 'dashicons-slides',
+		'show_in_admin_bar'     => true,
+		'show_in_nav_menus'     => true,
+		'can_export'            => true,
+		'has_archive'           => true,
+		'exclude_from_search'   => false,
+		'publicly_queryable'    => true,
+		'capability_type'       => 'page',
+		'show_in_rest'          => true,
+	);
+	register_post_type( 'hero_section', $args );
+
+}
+add_action( 'init', 'slide_items_post_type', 0 );
